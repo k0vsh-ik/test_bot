@@ -5,7 +5,7 @@ from loader import dp, bot, country_capitals, country, capitals
 from states import Questions
 
 
-ans = []
+ans = [0] * 10
 @dp.message_handler(state=Questions.Q1)
 async def ans1(msg: types.Message, state: FSMContext):
     answer = msg.text
@@ -123,7 +123,7 @@ async def ans10(msg: types.Message, state: FSMContext, p=0):
         }
     )
     data = await state.get_data()
-    await msg.answer(data[0])
+    await msg.answer(data)
     for keys in country_capitals:
         if country_capitals[keys] == data[keys]:
             ans[p] = 'Верно'
@@ -132,4 +132,4 @@ async def ans10(msg: types.Message, state: FSMContext, p=0):
         p += 1
     for i in range(10):
         await msg.answer(f"Ответ на вопрос {i + 1} -> {ans[i]}")
-    await state.reset_state()
+    await state.finish()

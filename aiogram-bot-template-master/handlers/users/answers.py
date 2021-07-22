@@ -1,9 +1,12 @@
-from aiogram import types
+from random import randint
 
-from loader import dp
+from aiogram import types
+from aiogram.dispatcher import FSMContext
+
+from loader import dp, bot, country
 from states import Questions
 
 
 @dp.message_handler(state=Questions.Q1)
-async def ans1(msg: types.Message):
-    await dp.send_message(msg.from_user.id, "Первое состояние")
+async def ans1(msg: types.Message, state: FSMContext):
+    pass

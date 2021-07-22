@@ -9,3 +9,4 @@ from states import Questions
 async def gameStart(msg: types.Message):
     await msg.reply("Игра начинается...")
     await Questions.first()
+    await msg.answer("Первое состояние")

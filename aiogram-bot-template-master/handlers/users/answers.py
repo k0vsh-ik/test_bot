@@ -15,7 +15,7 @@ async def ans1(msg: types.Message, state: FSMContext):
             country[0]: answer
         }
     )
-    await msg.answer(f"Назовите столицу -> {country[1]}")
+    await msg.answer(f"2. Назовите столицу -> {country[1]}")
     await Questions.next()
 
 
@@ -27,7 +27,7 @@ async def ans2(msg: types.Message, state: FSMContext):
             country[1]: answer
         }
     )
-    await msg.answer(f"Назовите столицу -> {country[2]}")
+    await msg.answer(f"3. Назовите столицу -> {country[2]}")
     await Questions.next()
 
 
@@ -39,7 +39,7 @@ async def ans3(msg: types.Message, state: FSMContext):
             country[2]: answer
         }
     )
-    await msg.answer(f"Назовите столицу -> {country[3]}")
+    await msg.answer(f"4. Назовите столицу -> {country[3]}")
     await Questions.next()
 
 
@@ -51,7 +51,7 @@ async def ans4(msg: types.Message, state: FSMContext):
             country[3]: answer
         }
     )
-    await msg.answer(f"Назовите столицу -> {country[4]}")
+    await msg.answer(f"5. Назовите столицу -> {country[4]}")
     await Questions.next()
 
 
@@ -63,7 +63,7 @@ async def ans5(msg: types.Message, state: FSMContext):
             country[4]: answer
         }
     )
-    await msg.answer(f"Назовите столицу -> {country[5]}")
+    await msg.answer(f"6. Назовите столицу -> {country[5]}")
     await Questions.next()
 
 
@@ -75,7 +75,7 @@ async def ans6(msg: types.Message, state: FSMContext):
             country[5]: answer
         }
     )
-    await msg.answer(f"Назовите столицу -> {country[6]}")
+    await msg.answer(f"7. Назовите столицу -> {country[6]}")
     await Questions.next()
 
 
@@ -87,7 +87,7 @@ async def ans7(msg: types.Message, state: FSMContext):
             country[6]: answer
         }
     )
-    await msg.answer(f"Назовите столицу -> {country[7]}")
+    await msg.answer(f"8. Назовите столицу -> {country[7]}")
     await Questions.next()
 
 
@@ -99,7 +99,7 @@ async def ans8(msg: types.Message, state: FSMContext):
             country[7]: answer
         }
     )
-    await msg.answer(f"Назовите столицу -> {country[8]}")
+    await msg.answer(f"9. Назовите столицу -> {country[8]}")
     await Questions.next()
 
 
@@ -111,7 +111,7 @@ async def ans9(msg: types.Message, state: FSMContext):
             country[8]: answer
         }
     )
-    await msg.answer(f"Назовите столицу -> {country[9]}")
+    await msg.answer(f"10. Назовите столицу -> {country[9]}")
     await Questions.next()
 
 

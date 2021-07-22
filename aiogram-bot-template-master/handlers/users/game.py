@@ -1,12 +1,18 @@
+import random
+
 from aiogram import types
 from aiogram.dispatcher.filters import Command
 
-from loader import dp
 from states import Questions
+from loader import dp, country
+
+random.shuffle(country)
 
 
 @dp.message_handler(Command("game"))
 async def gameStart(msg: types.Message):
-    await msg.reply("Игра начинается...")
+    await msg.answer("Игра начинается...")
+    await msg.answer(f"Назовите столицу -> {country[0]}")
     await Questions.first()
-    await msg.answer("Первое состояние")
+
+

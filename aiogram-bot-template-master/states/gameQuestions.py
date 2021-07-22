@@ -1,14 +1,14 @@
-from aiogram.dispatcher.filters.state import StatesGroup
+from aiogram.dispatcher.filters.state import StatesGroup, State
 
 
 class Questions(StatesGroup):
-    Q1 =
-    Q2 =
-    Q3 =
-    Q4 =
-    Q5 =
-    Q6 =
-    Q7 =
-    Q8 =
-    Q9 =
-    Q10 =
+    Q1 = State()
+    Q2 = State()
+    Q3 = State()
+    Q4 = State()
+    Q5 = State()
+    Q6 = State()
+    Q7 = State()
+    Q8 = State()
+    Q9 = State()
+    Q10 = State()

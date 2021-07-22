@@ -1,17 +1,18 @@
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 
-from loader import dp, bot, country_capitals, country, capitals
+from loader import dp, country_capitals, country
 from states import Questions
 
-
 ans = [0] * 10
+
+
 @dp.message_handler(state=Questions.Q1)
 async def ans1(msg: types.Message, state: FSMContext):
     answer = msg.text
     await state.update_data(
         {
-            country[0]:answer
+            country[0]: answer
         }
     )
     await msg.answer(f"Назовите столицу -> {country[1]}")
@@ -122,14 +123,25 @@ async def ans10(msg: types.Message, state: FSMContext, p=0):
             country[9]: answer
         }
     )
+
     data = await state.get_data()
-    await msg.answer(data)
+
     for keys in country_capitals:
-        if country_capitals[keys] == data[keys]:
+        print()
+        print(country_capitals[keys])
+        print(data[keys])
+
+        if str(country_capitals[keys]).lower() == str(data[keys]).lower():
             ans[p] = 'Верно'
+            print('+')
+
         else:
             ans[p] = 'Неверно'
+            print('-')
+
         p += 1
+
     for i in range(10):
         await msg.answer(f"Ответ на вопрос {i + 1} -> {ans[i]}")
+
     await state.finish()

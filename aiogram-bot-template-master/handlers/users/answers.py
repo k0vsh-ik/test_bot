@@ -143,5 +143,9 @@ async def ans10(msg: types.Message, state: FSMContext, p=0):
 
     for i in range(10):
         await msg.answer(f"Ответ на вопрос {i + 1} -> {ans[i]}")
+<<<<<<< Updated upstream
 
     await state.finish()
+=======
+    await state.reset_state()
+>>>>>>> Stashed changes
